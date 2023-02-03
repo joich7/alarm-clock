@@ -1,0 +1,46 @@
+
+
+
+body{
+    background-color: #282a36;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: whitesmoke;
+    width: 80%;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    font-size: 80px;
+    border-bottom: yellow 2px solid;
+}
+.liveClock{
+    color: greenyellow;
+    margin-left: auto;
+    margin-right: auto;
+   
+    text-align: center;
+    font-size: 80px;
+    padding: 30px;
+}
+.container{
+    background-color: tan;
+
+}
+.setAlarm{
+    padding-bottom: 50px;
+    
+}
+fieldset{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    font-size: 20px;
+   
+
+}
+
