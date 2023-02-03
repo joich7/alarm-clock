@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alarm Clock</title>
+</head>
+<body>
+    <header>
+        <h1>ALARM CLOCK</h1>
+
+    </header>
+
+
+    <div class="container">
+        <div class="liveClock"> </div>   
+        <!--Inputs for alarm-->
+        <div class="setAlarm">
+            <fieldset>
+                <legend>Set Alarm</legend>
+            <input id="hourInput" type="text" placeholder="hour">
+        
+            <input id="minuteInput" type="text" placeholder="minute">
+            
+        
+                
+                <label for="AM">AM</label> <input name= "am/pm" type="radio" id="AM" value="AM">
+                <label for="PM">PM</label> <input name= "am/pm" type="radio" id="PM" value="PM">
+          
+        </div>
+            </fieldset>
+    </div>
+
+
+
+
+<script>
+        
+        function myliveClock()
+        {
+            
+            let d = new Date();
+
+            let hours = d.getHours();
+            let minutes = d.getMinutes();
+            let seconds = d.getSeconds();
+            let AMorPM;
+            
+            //check time to see if 
+            if(hours<12)
+            {
+                AMorPM= "AM";
+            }
+            
+            else if(hours>12)
+            {
+                AMorPM = "PM";
+            }
+
+            //adding zero to front of numbers
+            if(hours < 10){
+                hours = "0"+hours;
+            }
+
+            if(minutes < 10){
+                minutes = "0"+minutes;
+            }
+
+            if(seconds < 10){
+                seconds = "0"+seconds;
+            }
+
+
+            let time = hours+":"+minutes+":"+seconds+AMorPM;
+
+            document.querySelector(".liveClock").innerHTML = time;  
+            
+            
+        }   
+        
+        setInterval(myliveClock, 1000)
+    
+        
+        
+
+    </script>
+    
+</body>
+</html>
